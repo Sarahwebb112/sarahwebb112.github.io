@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Domine:wght@400..700&family=Titan+One&display=swap');
+/*  
+font-family: "Titan One", sans-serif;
+font-family: "Dela Gothic One", sans-serif;
+font-family: "Domine", serif;
+*/
+*{
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 4fr 5fr;
+    grid-template-areas: 
+    "womenapp general women"
+    "womenapp general women"
+    "menapp general man";
+}
+.general {
+    grid-area: general;
+    display: flex;
+    width: 200%;
+    padding: 0px;
+}
+.womenapp {
+    grid-area: womenapp;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+}
+
+.women {
+    grid-area: women;
+    background: #999999;
+}
+.menapp {
+    grid-area: menapp;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+}
+.man {
+    grid-area: man;
+    background: #999999;
+}
+li{
+    list-style-type: none;
+    text-decoration: none;
+    font-family: "Dela Gothic One", sans-serif;
+    font-size: 2px;
+    font-weight: 500;
+}
+ul {
+    justify-content: center;
+}
+h1 {
+    color: #000;
+}
+section :nth-of-type(1){
+    color: #fff;
+    text-align: center;
+}
+section :nth-of-type(2){
+    color: #fff;
+    text-align: center;
+}
+section :nth-of-type(3){
+    color: #fff;
+    text-align: center;
+}
+section :nth-of-type(4){
+    color: #fff;
+    text-align: center;
+}
+
+
+
+@media (max-width: 768px) {
+    main {
+      display: grid;
+      grid-template-columns: 6fr 6fr;
+      grid-template-rows: auto;
+      grid-template-areas: 
+      "section1 section4"
+      "section1 section5"
+      "section3 section2";
+    }
+   
+    main section:nth-of-type(1) {
+      grid-area: section1;
+    }
+    main section:nth-of-type(2) {
+      grid-area: section2;
+    }
+    main section:nth-of-type(3) {
+      grid-area: section3;
+    }
+    main section:nth-of-type(4) {
+      grid-area: section4;
+    }
+    main section:nth-of-type(5) {
+      grid-area: section5;
+    }
+  }
+
+
+
